@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "associations",
+  "info": {
+    "singularName": "association",
+    "pluralName": "associations",
+    "displayName": "Association",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 2
+    },
+    "members": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "associations"
+    }
+  }
+}
