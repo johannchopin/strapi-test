@@ -52,3 +52,22 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 - [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
 - [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
 
+## Installation
+
+### Start postgres
+
+Run the docker image:
+
+```bash
+docker run --name MY_DOCKER_INSTANCE_NAME -p 5432:5432  -e POSTGRES_PASSWORD=MY_PWD  -e POSTGRES_USER=MY_USER  -e POSTGRES_DB=MY_DB_NAME -v my-postgres-db-db:/var/lib/postgresql/data -d postgres:15
+```
+
+### Start local smtp server
+
+Run the docker image:
+
+```bash
+docker run --name STRAPI_SMTP_PROVIDER -p 3000:80 -p 2525:25 rnwood/smtp4dev
+```
+
+The TCP port is `2525` and you can open the app at http://localhost:3000.

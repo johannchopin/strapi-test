@@ -4,16 +4,19 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "develop": "cross-env NODE_ENV=development strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
   "dependencies": {
     "@strapi/plugin-documentation": "^4.5.5",
     "@strapi/plugin-i18n": "4.5.5",
     "@strapi/plugin-users-permissions": "4.5.5",
+    "@strapi/provider-email-nodemailer": "^4.5.5",
     "@strapi/strapi": "4.5.5",
     "pg": "8.6.0"
   },
