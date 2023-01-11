@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_data_positions",
+  "info": {
+    "displayName": "Position"
+  },
+  "options": {},
+  "attributes": {
+    "latitude": {
+      "type": "string",
+      "regex": "^(-)?([0-9]+)(\\.[0-9]+)?$",
+      "required": true
+    },
+    "longitude": {
+      "type": "string",
+      "regex": "^(-)?([0-9]+)(\\.[0-9]+)?$",
+      "required": true
+    }
+  }
+}
